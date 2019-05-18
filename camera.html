@@ -7,6 +7,8 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="file" accept="image/*" capture="camera" />
+
     <script>
       function hasGetUserMedia() {
         return !!(
@@ -21,6 +23,8 @@
       }
     </script>
     <video autoplay></video>
+    <img src="" />
+    <canvas style="display:none;"></canvas>
 
     <script>
       const constraints = {
