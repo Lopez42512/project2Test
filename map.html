@@ -27,10 +27,15 @@
       // locate you.
       var map, infoWindow;
       function initMap() {
+        var marker = {lat: 40.028571, lng: -75.105537}
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 6
+          center: marker,
+          zoom: 15,
+          distance: 100 + 'km'
         });
+        var circle = new google.maps.Circle({map: map, radius: 100, fillColor: '#ff0000'})
+        var pinPoint = new google.maps.Marker({position: marker, map: map});
+        circle.bindTo('center', pinPoint, 'position')
         infoWindow = new google.maps.InfoWindow;
 
         // Try HTML5 geolocation.
