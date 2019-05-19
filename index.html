@@ -8,8 +8,11 @@
     <title>Camera App</title>
     <!-- Link to your main style sheet-->
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
   </head>
   <body>
+    <div id="map"></div>
+
     <!-- camera -->
     <main id="camera">
       <!-- camera view -->
@@ -25,6 +28,10 @@
       <button id="camera--trigger">Say Cheese</button>
     </main>
     <!-- Reference to your JavaScript file -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSoOBTkgPxUM66mJCx_DPW2G5_N8sSP48&callback=initMap">
+    </script>
+    <script src="map.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
